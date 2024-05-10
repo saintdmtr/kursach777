@@ -1,0 +1,371 @@
+body {
+    background-image: url('orig.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1.title {
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    background-color: #000000;
+    color: white;
+    width: fit-content;
+    margin: 40px auto;
+    position: relative;
+    z-index: 2;
+}
+
+#tabs-container {
+    width: 30%;
+    margin: 10px auto;
+    position: relative;
+    z-index: 1;
+}
+
+#tabs {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    position: relative;
+}
+
+.tabButton {
+    display: block;
+    min-width: 120px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF5733;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.tab {
+    display: none;
+}
+
+.active {
+    background-color: #ddd;
+}
+
+
+#uploadButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+    #uploadButtons label.btn,
+    #uploadButtons button.btn {
+        margin: 10px;
+        padding: 15px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    #uploadButtons label.btn {
+        background-color: #2eb185;
+        color: white;
+    }
+
+        #uploadButtons label.btn:hover {
+            background-color: rgba(32, 124, 94, 0.8);
+            transition: 0.5s;
+        }
+
+    #uploadButtons button.btn {
+        background-color: #008CBA;
+        color: white;
+    }
+
+        #uploadButtons button.btn:hover {
+            background-color: #005684;
+            transition: 0.5s;
+        }
+
+#csvTable {
+    display: none;
+    border-collapse: collapse;
+    width: 70%;
+    margin: 20px auto;
+}
+
+    #csvTable th, #csvTable td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    #csvTable th {
+        background-color: #f2f2f2;
+    }
+
+#editTab {
+    margin-top: 70px;
+    margin-left: 10px;
+    position: relative;
+}
+
+#existingDataTable {
+    position: absolute;
+    border-collapse: collapse;
+    width: 50%;
+    margin-top: 20px;
+    margin-top: -1px; /* Отрицательный отступ сверху */
+}
+
+    #existingDataTable th,
+    #existingDataTable td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    #existingDataTable th {
+        background-color: #f2f2f2;
+    }
+
+#studentInputContainer {
+    width: 50%;
+    margin-left: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 5px;
+}
+
+    #studentInputContainer input {
+        width: 300px;
+        padding: 12px;
+        margin-bottom: 10px;
+        border: 2px solid #ddd;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    #studentInputContainer label {
+        margin-bottom: 5px;
+        font-size: 16px;
+        display: inline-block;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 8px;
+        background-color: rgba(46, 177, 133, 0.8);
+        ;
+    }
+
+    #studentInputContainer input {
+        padding: 12px;
+        margin-bottom: 10px;
+        border: 2px solid #ddd;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+#addStudentBtn {
+    margin-top: 10px;
+    margin-left: 90px;
+    padding: 10px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    #addStudentBtn:hover {
+        background-color: #005684;
+        transition: 0.5s;
+    }
+
+#applyChangesBtn {
+    margin-top: 15px;
+    margin-left: 73px;
+    padding: 10px;
+    background-color: #00ba5d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+    #applyChangesBtn:hover {
+        background-color: rgba(32, 124, 94, 0.8);
+        transition: 0.5s;
+    }
+
+#exportDataBtn {
+    margin-top: 30px;
+    margin-left: 42px;
+    background-color: #00ba5d;
+    color: white;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    #exportDataBtn:hover {
+        background-color: rgba(32, 124, 94, 0.8);
+        transition: 0.5s;
+    }
+
+#statsTab h1 {
+    font-size: 24px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+    margin-top: 60px; /* Верхний отступ */
+    color: #333; /* Цвет текста */
+}
+
+#statsTable {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+    #statsTable th, #statsTable td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    #statsTable th {
+        background-color: #f2f2f2;
+    }
+
+#statsTableBody tr:hover {
+    background-color: #f5f5f5;
+}
+
+#statsTab h2 {
+    font-size: 24px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+    margin-top: 60px; /* Верхний отступ */
+    color: #333; /* Цвет текста */
+}
+
+#studentStatsTable {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+    #studentStatsTable th, #studentStatsTable td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    #studentStatsTable th {
+        background-color: #f2f2f2;
+    }
+
+#studentStatsTableBody tr:hover {
+    background-color: #f5f5f5;
+}
+
+#graphTab {
+    margin-top: 150px;
+}
+
+    #graphTab h1 {
+        font-size: 24px; /* Размер шрифта */
+        font-weight: bold; /* Жирный шрифт */
+        margin-top: 60px; /* Верхний отступ */
+        color: #333; /* Цвет текста */
+    }
+
+    #graphTab h2 {
+        margin-top: 120px;
+        margin-bottom: -120px;
+        font-size: 24px; /* Размер шрифта */
+        font-weight: bold; /* Жирный шрифт */
+        margin-top: 60px; /* Верхний отступ */
+        color: #333; /* Цвет текста */
+    }
+/* Стили для блока помощи */
+.tab11 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+/* Стили для блока помощи */
+.help-block1,
+.help-block2,
+.help-block3,
+.help-block4 {
+    border-radius: 70px;
+    border: 1px solid #FF5703;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px; /* Внутренний отступ блока */
+    width: 49.7%; /* Задаем ширину блока */
+    box-sizing: border-box; /* Учитываем толщину границы и внутренний отступ в размерах блока */
+}
+
+.help-block3,
+.help-block4 {
+    margin-top: 10px;
+}
+
+.help-block3,
+.help-block1 {
+    margin-right: 10px;
+}
+
+.tabButton:hover {
+    background-color: #005684;
+    transition: 0.5s;
+}
+
+.about_the_developer {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.about {
+    font-size: 25px;
+    padding-left: 50px;
+    flex-direction: column;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    width: 550px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.avatar {
+    padding-left: 300px;
+    display: flex;
+    height: 400px;
+    width: 600px;
+    align-items: center;
+}
